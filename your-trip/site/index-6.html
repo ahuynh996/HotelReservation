@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Booking</title>
-				<meta charset="utf-8">
+		<title>Review</title>
+		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico" />
@@ -73,7 +73,7 @@
 								<li><a href="index.html">ABOUT</a></li>
 								<li><a href="index-1.html">Locations</a></li>
 								<li><a href="index-2.html">SPECIAL OFFERS</a></li>
-								<li><a href="index-3.html">Reviews</a></li>
+								<li class="current"><a href="index-3.html">Reviews</a></li>
 								<li><a href="index-4.html">CONTACTS</a></li>
 							</ul>
 						</nav>
@@ -92,60 +92,10 @@
 <!--==============================Content=================================-->
 		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
 			<div class="container_12">
-
-				<form id="bookingForm">
-					<div class="grid_8">
-					<h3>Services</h3>
-						<div class="tmRadio">
-							<p>Select a breakfast:</p>
-							<input name="breakfast" type="radio" id="Continental" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>Continental</span>
-							<input name="breakfast" type="radio" id="English" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>English</span>
-							<input name="breakfast" type="radio" id="American" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>American</span>
-							<input name="breakfast" type="radio" id="French" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>French</span>
-							<input name="breakfast" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' checked/>
-							<span>None</span>
-						</div>
-						<div class="tmRadio">
-							<p>Do you require laundry service?</p>
-							<input name="laundry" type="radio" id="Yes" data-constraints='@RadioGroupChecked(name="laundry", groups=[RadioGroup])' />
-							<span>Yes</span>
-							<input name="laundry" type="radio" id="No" data-constraints='@RadioGroupChecked(name="laundry", groups=[RadioGroup])' checked/>
-							<span>No</span>
-						</div>
-						<div class="tmRadio">
-							<p>Do you require airport taxi?</p>
-							<input name="taxi" type="radio" id="Yes" data-constraints='@RadioGroupChecked(name="taxi", groups=[RadioGroup])' />
-							<span>Yes</span>
-							<input name="taxi" type="radio" id="No" data-constraints='@RadioGroupChecked(name="taxi", groups=[RadioGroup])' checked/>
-							<span>No</span>
-						</div>
-						<div class="tmRadio">
-							<p>Do you require parking?</p>
-							<input name="parking" type="radio" id="Yes" data-constraints='@RadioGroupChecked(name="parking", groups=[RadioGroup])' />
-							<span>Yes</span>
-							<input name="parking" type="radio" id="No" data-constraints='@RadioGroupChecked(name="parking", groups=[RadioGroup])' checked/>
-							<span>No</span>
-						</div>
-  				  </div>
-  				  <div class="grid_6">
-  				  		<h3>Credit Card Information</h3>
-						<div class="tmRadio">
-							<p>Type of Credit Card:</p>
-							<input name="cardType" type="radio" id="Visa" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' checked/>
-							<span>Visa</span>
-							<input name="cardType" type="radio" id="Master" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' />
-							<span>Master</span>
-							<input name="cardType" type="radio" id="Discover" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' />
-							<span>Discover</span>
-							<input name="cardType" type="radio" id="Amex" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' />
-							<span>Amex</span>
-						</div>
-        				<div class="clear"></div>
-        				<div class="fl1">
+				<div class="grid_12">
+					<h3>Write a review</h3>
+					<form id="bookingForm">
+						<div class="fl1">
 							<div class="tmInput">
 								<input name="firstName" placeHolder="First Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
 							</div>
@@ -158,40 +108,55 @@
 						<div class="clear"></div>
 						<div class="fl">
 							<div class="tmInput">
-								<input name="CardNumber" placeHolder="Card Number:" type="text" data-constraints="@NotEmpty @Required">
+								<input name="location" placeHolder="Location of stay" type="text" data-constraints="@NotEmpty @Required">
 							</div>
 						</div>
 						<div class="clear"></div>
-						<div class="fl">
-							<label class="tmDatepicker">
-								<input type="text" name="expDate" placeHolder='Expiration Date: MM/YY' data-constraints="@NotEmpty @Required">
-							</label>
+						<div class="tmRadio">
+							<p>Type of Review: </p>
+							<input name="reviewType" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="reviewType", groups=[RadioGroup])' checked/>
+							<span>Room Review</span>
+							<input name="reviewType" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="reviewType", groups=[RadioGroup])' />
+							<span>Service Review</span>
+							<input name="reviewType" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="reviewType", groups=[RadioGroup])' />
+							<span>Breakfast Review</span>
 						</div>
-						<legend>CVV:</legend>
-						<div class="tmInput">
-							<input name="security" placeHolder="Security Code:" type="text" data-constraints="@NotEmpty @Required">
+						<div class="clear"></div>
+						<div class="fl1 fl2">
+							<em>Rating</em>
+							<select name="Rating" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+							</select>
 						</div>
-						<div class="tmInput">
-							<input name="Address" placeHolder="Billing Address:" type="text" data-constraints="@NotEmpty @Required">
+						<div class="clear"></div>
+						<div class="tmTextarea">
+							<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
 						</div>
-						<div class="btns">
-							<a href="index-8.html" data-type="submit" class="btn">Submit</a>
-						</div>
-					</div>
-      			</form>
-
+						<a href="index-7.html" data-type="submit" class="btn">Submit</a>
+					</form>
+				</div>
 			</div>
 		</div>
 <!--==============================footer=================================-->
 		<script>
-		$(function (){
-			$('#bookingForm').bookingForm({
-				ownerEmail: '#'
+			$(function (){
+				$('#bookingForm').bookingForm({
+					ownerEmail: '#'
+				});
+			})
+			$(function() {
+				$('#bookingForm input, #bookingForm textarea').placeholder();
 			});
-		})
-		$(function() {
-			$('#bookingForm input, #bookingForm textarea').placeholder();
-		});
 		</script>
 	</body>
 </html>
