@@ -93,9 +93,39 @@
            					<option value = "Amex">Amex</option>
         				</select>
         				<div class="clear"></div>
-        				<label class="name">
-							<input type="text" placeholder="Name:" data-constraints="@Required @JustLetters" />
-						</label>
+        				<p> </p>
+        				<legend>First Name:</legend>
+        				<div class="fl1">
+							<div class="tmInput">
+								<input name="FName" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+							</div>
+						</div>
+						<legend>Last Name:</legend>
+						<div class="fl1">
+        					<div class="tmInput">
+								<input name="LName" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+							</div>
+						</div>
+						<legend>Card Number:</legend>
+						<div class="fl">
+							<div class="tmInput">
+								<input name="CardNumber" placeHolder="Card Number" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+						<legend>Expiration Date:</legend>
+						<div class="fl">
+							<label class="tmDatepicker">
+								<input type="text" name="expDate" placeHolder='MM/YY' data-constraints="@NotEmpty @Required @Date">
+							</label>
+						</div>
+						<legend>CVV:</legend>
+						<div class="tmInput">
+							<input name="security" placeHolder="Security Code:" type="text" data-constraints="@NotEmpty @Required">
+						</div>
+						<legend>Address:</legend>
+						<div class="tmInput">
+							<input name="Address" placeHolder="Address" type="text" data-constraints="@NotEmpty @Required">
+						</div>
 						<div class="btns">
 							<a href="#" data-type="submit" class="btn">Submit</a>
 						</div>
