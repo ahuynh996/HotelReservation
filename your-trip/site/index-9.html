@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Hulton Hotel</title>
-		<meta charset="utf-8">
+		<title>Register</title>
+				<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico" />
@@ -50,8 +50,19 @@
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			});
 		</script>
+		<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+			</a>
+		</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
 	</head>
-	<body class="page1" id="top">
+	<body>
 <!--==============================header=================================-->
 		<header>
 			<div class="container_12">
@@ -59,7 +70,7 @@
 					<div class="menu_block">
 						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 							<ul class="sf-menu">
-								<li class="current"><a href="index.html">ABOUT</a></li>
+								<li><a href="index.html">ABOUT</a></li>
 								<li><a href="index-1.html">Locations</a></li>
 								<li><a href="index-2.html">SPECIAL OFFERS</a></li>
 								<li><a href="index-3.html">Reviews</a></li>
@@ -78,77 +89,13 @@
 				</div>
 			</div>
 		</header>
-		<div class="slider_wrapper">
-			<div id="camera_wrap" class="">
-				<div data-src="images/slide.jpg">
-					<div class="caption fadeIn">
-						<h2>LONDON</h2>
-						<div class="price">
-							FROM
-							<span>$250</span>
-						</div>
-						<a href="index-1.html">LEARN MORE</a>
-					</div>
-				</div>
-				<div data-src="images/slide1.jpg">
-					<div class="caption fadeIn">
-						<h2>Maldives</h2>
-						<div class="price">
-							FROM
-							<span>$1200</span>
-						</div>
-						<a href="index-1.html">LEARN MORE</a>
-					</div>
-				</div>
-				<div data-src="images/slide2.jpg">
-					<div class="caption fadeIn">
-						<h2>Venice</h2>
-						<div class="price">
-							FROM
-							<span>$160</span>
-						</div>
-						<a href="index-1.html">LEARN MORE</a>
-					</div>
-				</div>
-			</div>
-		</div>
 <!--==============================Content=================================-->
 		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
 			<div class="container_12">
-				<div class="grid_4">
-					<div class="banner">
-						<img src="images/ban_img1.jpg" alt="">
-						<div class="label">
-							<div class="title">Barcelona</div>
-							<div class="price">FROM<span>$ 110</span></div>
-							<a href="index-1.html">LEARN MORE</a>
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="banner">
-						<img src="images/ban_img2.jpg" alt="">
-						<div class="label">
-							<div class="title">GOA</div>
-							<div class="price">FROM<span>$ 125</span></div>
-							<a href="index-1.html">LEARN MORE</a>
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="banner">
-						<img src="images/ban_img3.jpg" alt="">
-						<div class="label">
-							<div class="title">PARIS</div>
-							<div class="price">FROM<span>$ 320</span></div>
-							<a href="index-1.html">LEARN MORE</a>
-						</div>
-					</div>
-				</div>
-				<div class="clear"></div>
-				<div class="grid_6">
-					<h3>Login</h3>
-					<form id="bookingForm">
+
+				<form id="bookingForm">
+					<div class="grid_6">
+						<h3>Register</h3>
 						<div class="fl">
 							<div class="tmInput">
 								<input name="Username" placeHolder="Username" type="text" data-constraints="@NotEmpty @Required">
@@ -156,41 +103,23 @@
 							<div class="tmInput">
 								<input name="Password" placeHolder="Password" type="text" data-constraints="@NotEmpty @Required">
 							</div>
+							<a href="index.html" data-type="submit" class="btn">Submit</a>
 						</div>
-						<a href="index-5.html" data-type="submit" class="btn">Submit</a>
-					</form>
-					<h3>Register</h3>
-					<a href="index-9.html" class="btn">Register</a>
-				</div>
-				<div class="grid_5 prefix_1">
-					<h3>Welcome</h3>
-					<div class="extra_wrapper">
-						<p>Hulton Chain Hotel has been around since 1962. Due to great services and unmatched hospitality, Hulton continues to be a leader in the Hotel Industries. Travel is made easier at Hulton Hotels.</p>
-					<h4>Reviews</h4>
-					<blockquote class="bq1">
-						<img src="images/page1_img2.jpg" alt="" class="img_inner noresize fleft">
-						<div class="extra_wrapper">
-							<p>Cannot be faulted from the wonderful food, excellent accommodation and staff who go the extra mile all the time.</p>
-							<div class="alright">
-								<div class="col1">Billy Bob</div>
-								<a href="index-3.html" class="btn">More</a>
-							</div>
-						</div>
-					</blockquote>
-				</div>
+					</div>
+      			</form>
+
 			</div>
 		</div>
 <!--==============================footer=================================-->
 		<script>
-			$(function (){
-				$('#bookingForm').bookingForm({
-					ownerEmail: '#'
-				});
-			})
-			$(function() {
-				$('#bookingForm input, #bookingForm textarea').placeholder();
+		$(function (){
+			$('#bookingForm').bookingForm({
+				ownerEmail: '#'
 			});
+		})
+		$(function() {
+			$('#bookingForm input, #bookingForm textarea').placeholder();
+		});
 		</script>
 	</body>
 </html>
-

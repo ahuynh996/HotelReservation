@@ -94,6 +94,88 @@
 			<div class="container_12">
 
 				<form id="bookingForm">
+					<div class="grid_6">
+						<h3>Booking Form</h3>
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+							</div>
+							<div class="tmInput">
+								<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+							</div>
+						</div>
+						<div class="fl1">
+							<div class="tmInput">
+								<input name="Phone" placeHolder="Phone #" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+							<div class="tmInput mr0">
+								<input name="Hotel" placeHolder="Hotel Location:" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+
+						<div class="clear"></div>
+						<div class="fl">
+							<div class="tmInput">
+								<input name="Address" placeHolder="Address" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+						</div>
+
+						<div class="clear"></div>
+						<strong>Check-in</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-in" placeHolder='Enter Date' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<strong>Check-out</strong>
+						<label class="tmDatepicker">
+							<input type="text" name="Check-out" placeHolder='Enter Date' data-constraints="@NotEmpty @Required @Date">
+						</label>
+						<div class="clear"></div>
+						<div class="tmRadio">
+							<p>Room Type</p>
+							<input name="Room_Type" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' checked/>
+							<span>standard</span>
+							<input name="Room_Type" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' />
+							<span>double</span>
+							<input name="Room_Type" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' />
+							<span>deluxe</span>
+							<input name="Room_Type" type="radio" id="tmRadio3" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' />
+							<span>suite</span>
+						</div>
+						<div class="clear"></div>
+						<div class="fl1 fl2">
+							<em>Adults</em>
+							<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+							</select>
+							<div class="clear"></div>
+							<em>Rooms</em>
+							<select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>1</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="fl1 fl2">
+							<em>Children</em>
+							<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+								<option>0</option>
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="tmTextarea">
+							<textarea name="Message" placeHolder="Message")'></textarea>
+						</div>
+					</div>
 					<div class="grid_8">
 					<h3>Services</h3>
 						<div class="tmRadio">
