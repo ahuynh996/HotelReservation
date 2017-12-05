@@ -99,7 +99,7 @@
 						
 						<div class="fl1 fl2">
 							<strong>Hotel Location</strong>
-							<select name="Location" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+							<select name="Country" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
 								<option>Brazil</option>
 								<option>Brazil</option>
 								<option>Britain</option>
@@ -118,23 +118,23 @@
 						<div class="clear"></div>
 						<strong>Check-in</strong>
 						<label class="tmDatepicker">
-							<input type="text" name="Check-in" placeHolder='Enter Date' data-constraints="@NotEmpty @Required @Date">
+							<input type="text" name="InDate" placeHolder='Enter Date' data-constraints="@NotEmpty @Required @Date">
 						</label>
 						<div class="clear"></div>
 						<strong>Check-out</strong>
 						<label class="tmDatepicker">
-							<input type="text" name="Check-out" placeHolder='Enter Date' data-constraints="@NotEmpty @Required @Date">
+							<input type="text" name="OutDate" placeHolder='Enter Date' data-constraints="@NotEmpty @Required @Date">
 						</label>
 						<div class="clear"></div>
 						<div class="tmRadio">
 							<p>Room Type</p>
-							<input name="Room_Type" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' checked/>
+							<input name="RType" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="RType", groups=[RadioGroup])' checked/>
 							<span>standard</span>
-							<input name="Room_Type" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' />
+							<input name="RType" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="RType", groups=[RadioGroup])' />
 							<span>double</span>
-							<input name="Room_Type" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' />
+							<input name="RType" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="RType", groups=[RadioGroup])' />
 							<span>deluxe</span>
-							<input name="Room_Type" type="radio" id="tmRadio3" data-constraints='@RadioGroupChecked(name="Room_Type", groups=[RadioGroup])' />
+							<input name="RType" type="radio" id="tmRadio3" data-constraints='@RadioGroupChecked(name="RType", groups=[RadioGroup])' />
 							<span>suite</span>
 						</div>
 						<div class="clear"></div>
@@ -170,13 +170,13 @@
   				  		<h3>Credit Card Information</h3>
 						<div class="tmRadio">
 							<p>Type of Credit Card:</p>
-							<input name="cardType" type="radio" id="Visa" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' checked/>
+							<input name="CType" type="radio" id="Visa" data-constraints='@RadioGroupChecked(name="CType", groups=[RadioGroup])' checked/>
 							<span>Visa</span>
-							<input name="cardType" type="radio" id="Master" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' />
+							<input name="CType" type="radio" id="Master" data-constraints='@RadioGroupChecked(name="CType", groups=[RadioGroup])' />
 							<span>Master</span>
-							<input name="cardType" type="radio" id="Discover" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' />
+							<input name="CType" type="radio" id="Discover" data-constraints='@RadioGroupChecked(name="CType", groups=[RadioGroup])' />
 							<span>Discover</span>
-							<input name="cardType" type="radio" id="Amex" data-constraints='@RadioGroupChecked(name="cardType", groups=[RadioGroup])' />
+							<input name="CType" type="radio" id="Amex" data-constraints='@RadioGroupChecked(name="CType", groups=[RadioGroup])' />
 							<span>Amex</span>
 						</div>
         				<div class="clear"></div>
@@ -188,7 +188,7 @@
 						<div class="clear"></div>
 						<div class="fl">
 							<div class="tmInput">
-								<input name="CardNumber" placeHolder="Card Number:" type="text" data-constraints="@NotEmpty @Required">
+								<input name="CNumber" placeHolder="Card Number:" type="text" data-constraints="@NotEmpty @Required">
 							</div>
 						</div>
 						<div class="clear"></div>
@@ -199,10 +199,10 @@
 						</div>
 						<legend>CVV:</legend>
 						<div class="tmInput">
-							<input name="security" placeHolder="Security Code:" type="text" data-constraints="@NotEmpty @Required">
+							<input name="SecCode" placeHolder="Security Code:" type="text" data-constraints="@NotEmpty @Required">
 						</div>
 						<div class="tmInput">
-							<input name="Address" placeHolder="Billing Address:" type="text" data-constraints="@NotEmpty @Required">
+							<input name="BillingAddr" placeHolder="Billing Address:" type="text" data-constraints="@NotEmpty @Required">
 						</div>
 						<a href="index-8.html" data-type="submit" class="btn">Submit</a>
 					</div>
