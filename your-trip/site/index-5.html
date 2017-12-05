@@ -96,27 +96,7 @@
 				<form id="bookingForm">
 					<div class="grid_6">
 						<h3>Booking Form</h3>
-						<div class="fl1">
-							<div class="tmInput">
-								<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
-							</div>
-							<div class="tmInput">
-								<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
-							</div>
-						</div>
-						<div class="fl1">
-							<div class="tmInput">
-								<input name="Phone" placeHolder="Phone #" type="text" data-constraints="@NotEmpty @Required">
-							</div>
-
-						</div>
-
-						<div class="clear"></div>
-						<div class="fl">
-							<div class="tmInput">
-								<input name="Address" placeHolder="Address" type="text" data-constraints="@NotEmpty @Required">
-							</div>
-						</div>
+						
 						<div class="fl1 fl2">
 							<strong>Hotel Location</strong>
 							<select name="Location" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
@@ -173,8 +153,6 @@
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
-								<option>4</option>
-								<option>5</option>
 							</select>
 						</div>
 						<div class="fl1 fl2">
@@ -187,47 +165,7 @@
 							</select>
 						</div>
 						<div class="clear"></div>
-						<div class="tmTextarea">
-							<textarea name="Message" placeHolder="Message")'></textarea>
-						</div>
 					</div>
-					<div class="grid_8">
-					<h3>Services</h3>
-						<div class="tmRadio">
-							<p>Select a breakfast:</p>
-							<input name="breakfast" type="radio" id="Continental" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>Continental</span>
-							<input name="breakfast" type="radio" id="English" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>English</span>
-							<input name="breakfast" type="radio" id="American" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>American</span>
-							<input name="breakfast" type="radio" id="French" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' />
-							<span>French</span>
-							<input name="breakfast" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Breakfast", groups=[RadioGroup])' checked/>
-							<span>None</span>
-						</div>
-						<div class="tmRadio">
-							<p>Do you require laundry service?</p>
-							<input name="laundry" type="radio" id="Yes" data-constraints='@RadioGroupChecked(name="laundry", groups=[RadioGroup])' />
-							<span>Yes</span>
-							<input name="laundry" type="radio" id="No" data-constraints='@RadioGroupChecked(name="laundry", groups=[RadioGroup])' checked/>
-							<span>No</span>
-						</div>
-						<div class="tmRadio">
-							<p>Do you require airport taxi?</p>
-							<input name="taxi" type="radio" id="Yes" data-constraints='@RadioGroupChecked(name="taxi", groups=[RadioGroup])' />
-							<span>Yes</span>
-							<input name="taxi" type="radio" id="No" data-constraints='@RadioGroupChecked(name="taxi", groups=[RadioGroup])' checked/>
-							<span>No</span>
-						</div>
-						<div class="tmRadio">
-							<p>Do you require parking?</p>
-							<input name="parking" type="radio" id="Yes" data-constraints='@RadioGroupChecked(name="parking", groups=[RadioGroup])' />
-							<span>Yes</span>
-							<input name="parking" type="radio" id="No" data-constraints='@RadioGroupChecked(name="parking", groups=[RadioGroup])' checked/>
-							<span>No</span>
-						</div>
-  				  </div>
   				  <div class="grid_6">
   				  		<h3>Credit Card Information</h3>
 						<div class="tmRadio">
@@ -242,14 +180,9 @@
 							<span>Amex</span>
 						</div>
         				<div class="clear"></div>
-        				<div class="fl1">
+        				<div class="fl">
 							<div class="tmInput">
-								<input name="firstName" placeHolder="First Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
-							</div>
-						</div>
-						<div class="fl1">
-        					<div class="tmInput">
-								<input name="lastName" placeHolder="Last Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+								<input name="CName" placeHolder="Full Name:" type="text" data-constraints="@NotEmpty @Required @AlphaSpecial">
 							</div>
 						</div>
 						<div class="clear"></div>
